@@ -1,0 +1,120 @@
+#service{
+    padding: 80px 0;
+    .services-details {
+        padding-top: 40px;
+        transition: all 0.5s ease 0s;
+        text-align: center;
+        &:hover{
+            .services-icon{
+                i{
+                    color: $theme-color !important;
+                    transition: all 0.5s ease 0s;
+                }    
+            }
+            h4{
+                color: $theme-color;
+                transition: all 0.5s ease 0s;
+            }
+        }
+        .services-icon {
+            color: $black;
+            display: inline-block;
+            font-size: 36px;
+            line-height: 36px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease 0s;
+            text-decoration: none;
+            i{
+                color: $black;
+            }
+        }
+        h4{
+            color: #444;
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0 0 15px;
+            font-family: 'Raleway', sans-serif;
+        }
+        p{
+            color: #333;
+            font-size: 14px;
+            margin: 0 0 15px;
+            line-height: 22px;
+        }
+    }
+}
+
+.wellcome-area{
+    background: rgba(248,248,248,0.8) url(../images/bg1.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 80px 0;
+    .well-bg {
+        position: relative;
+        .test-overly {
+            background: rgba(0,0,0,0.80);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .wellcome-text {
+            margin: 70px 0;
+            padding: 30px 40px;
+        }
+        .well-text{
+            h2 {
+                color: $white;
+                font-size: 44px;
+                font-weight: 500;
+                line-height: 50px;
+                margin: 0 0 15px;
+            }
+            p {
+                font-size: 18px;
+                font-style: italic;
+                color: $white;
+            }
+            .subs-feilds {
+                border: 1px solid $white;
+                display: inline-block;
+                height: 52px;
+                margin-top: 30px;
+                width: 60%;
+                border-radius: 30px;
+                overflow: hidden;
+                @media (max-width: 575.98px){
+                    width: 200px;
+                }
+                .suscribe-input{
+                    input {
+                        background: transparent none repeat scroll 0 0;
+                        border: medium none;
+                        color: $white;
+                        float: left;
+                        font-size: 15px;
+                        line-height: 24px;
+                        padding: 11px 15px;
+                        width: 200px;
+                        height: 50px;
+                    }
+                }
+            }
+            .subscribe-btn{
+                button {
+                    background: $theme-color none repeat scroll 0 0;
+                    border: medium none;
+                    border-radius: 30px;
+                    color: $white;
+                    font-size: 20px;
+                    font-weight: 700;
+                    padding: 14px 20px;
+                    width: 20%;
+                    margin-top: 10px;
+
+                }
+            }
+        }
+    }
+}

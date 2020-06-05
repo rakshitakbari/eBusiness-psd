@@ -1,0 +1,116 @@
+#team{
+    padding: 40px 16px;
+    .single-team-member {
+        border: 1px solid #ddd;
+        &:hover{
+            .team-img{
+                a{
+                    &::after{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .team-img {
+            position: relative;
+            a{
+                display: block;
+                &::after{
+                    background: rgba(0,0,0,0.70);
+                    bottom: 0;
+                    content: "";
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    transition: all 0.5s ease 0s;
+                    width: 100%;
+                    opacity: 0;
+                }
+            }
+        }
+        .team-content {
+            padding: 10px 0px;
+            h4{
+                color: #444;
+                margin-bottom: 5px;
+                font-size: 24px;
+                line-height: 26px;
+                margin: 0 0 15px;
+                font-weight: 500;
+            }
+            p{
+                color: #444;
+                margin-bottom: 5px;
+                font-size: 14px;
+                overflow-x: hidden;
+                line-height: 22px;
+            }
+        }
+    }
+}
+.reviews-area{
+    background: url(../images/bg1.jpg);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 40px 0;
+    .work-left-text {
+        width: 50%;
+        background: $theme-color none repeat scroll 0 0;
+    }
+    .work-right-text {
+        background: rgba(0,0,0,0.8) none repeat scroll 0 0;
+        float: right;
+        height: 100%;
+        overflow: hidden;
+        padding: 71px 0;
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        h2 {
+            color: $white;
+            text-transform: uppercase;
+            font-size: 24px;
+            font-family: 'Raleway',sans-serif;
+            margin: 0 0 15px;
+            font-weight: 500;
+        }
+        h5 {
+            color: $white;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 34px;
+            text-transform: uppercase;
+            font-family: 'Raleway',sans-serif;
+            margin: 0 0 15px;
+        }
+        .ready-btn {
+            border: 1px solid $white;
+            border-radius: 30px;
+            color: $white;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 17px;
+            font-weight: 600;
+            margin-top: 30px;
+            padding: 12px 40px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: all 0.4s ease 0s;
+            z-index: 222;
+            text-decoration: none;
+            &:hover{
+                background-color: $theme-color !important;
+                transition: all 0.4s ease 0s;
+                color: $white;
+                border-color: $theme-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,141 @@
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(0,0,0,0.40);
+    z-index: 9;
+    a.navbar-brand{
+        display: inline-block;
+        height: 56px;
+        padding: 10px 0;
+        color: #777;
+        font-size: 18px;
+        line-height: 20px;
+        h1{
+            color: $white;
+            padding: 0;
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 1;
+            font-family: 'Raleway',sans-serif;
+            span {
+                color: $theme-color;
+                font-family: 'Raleway',sans-serif;
+            }
+        }
+    }
+    .navbar-toggler-icon{
+        padding-top: 10px;
+    }
+    .navbar-collapse{
+        z-index: 1;
+        .navbar-nav{
+            @include media-breakpoint-down(sm){
+                background: rgba(52,59,64,0.9);
+                -webkit-box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.15);
+                    li{
+                        margin-left: 20px;
+                        padding: 10px;
+                        a{
+                            color: $white !important;
+                            font-size: 12px;
+                        }
+                }
+            }
+        }    
+        ul{
+            li{
+                display: inline-block;
+                padding: 0px 10px;
+                a{
+                    font-size: 15px;
+                    font-weight: 500;
+                    padding: 16px 0px;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    color: $white;
+                    &:hover{
+                        color: $theme-color;
+                        transition: all 0.4s ease-in-out;
+                    }
+                    @include media-breakpoint-down(md){
+                        font-size: 9px;
+                    }
+                    @include media-breakpoint-down(sm){
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 0 !important;
+                    }
+                }
+                &.active{
+                    background: rgba(0,0,0,0) none repeat scroll 0 0;
+                    color: $white;
+                    position: relative;
+                    @include media-breakpoint-down(md){
+                        > a::after{
+                            display: none;
+                        }
+                    }
+                        > a::after {
+                            border: 1px solid $white;
+                            bottom: 0px;
+                            content: "";
+                            left: 16px;
+                            position: absolute;
+                            width: 60%;
+                            margin: 0 auto;
+                            text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .fixed-header{
+        background: rgba(52,59,64,0.9);
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        z-index: 20;
+        padding: 20px 16px;
+        height: 72px;
+        transition: all 0.5s;
+        .navbar-brand{
+            color: $black !important;
+        }
+        ul{
+            li{
+                a{
+                    color: $white !important;
+                    transition: .3 all ease-in-out;
+                }
+            }
+        }
+        &.active{
+            color: $white !important;
+            transition: all 0.4s ease-in-out;
+        }                
+        // .navbar-nav{
+        //     .active{
+        //         color: $theme-color !important;
+        //     }
+        // }
+        .functional-buttons{
+            ul{
+                li{
+                    &:first-child a {
+                        border: 2px solid $theme-color !important;
+                        color: $theme-color !important;
+                    }
+                }
+            }  
+            .navbar-toggler{
+                border: 2px solid $theme-color;
+            }      
+        }
+    }
+}
